@@ -3,274 +3,324 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Muhammad Hassan Ali — Software Developer</title>
-<meta name="description" content="Portfolio of Muhammad Hassan Ali: computer science student, Python backend developer, and AI & automation enthusiast.">
-<meta property="og:title" content="Muhammad Hassan Ali — Software Developer">
-<meta property="og:description" content="Building software. Exploring what’s next.">
+<title>Hassan Ali — Python Full-Stack Developer</title>
+<meta name="description" content="Hassan Ali is a Computer Science undergraduate and Python Full-Stack Developer building practical software and working toward becoming an AI Engineer.">
+<meta property="og:title" content="Hassan Ali — Python Full-Stack Developer">
+<meta property="og:description" content="Building software, exploring intelligence. Projects in FastAPI, JavaScript and more.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#101510;--bg2:#191f19;--card:#202920;--tx:#f5f7f2;--tx2:#a5b0a2;--g:#a6e22e;--g2:#c5f36a;--gd:#173b2a;--bd:rgba(166,226,46,.16);--ink:#101510;
---h:'Space Grotesk',system-ui,sans-serif;--b:'Inter',system-ui,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f4f7ee;--bg2:#e9efdf;--card:#fff;--tx:#101510;--tx2:#4a5547;--gd:#dff3b4;--bd:rgba(23,59,42,.18)}}
-*,*::before,*::after{box-sizing:inherit}
-html{scroll-behavior:smooth;scroll-padding-top:80px;height:100%}
-body{margin:0;background:var(--bg);color:var(--tx);font:400 1.0625rem/1.65 var(--b);overflow-x:hidden}
+:root{--bg:#0b0f1a;--bg2:#111827;--card:#141b2d;--line:#222c44;--tx:#e6eaf5;--mu:#97a3bf;--ac:#6ee7b7;--ac2:#60a5fa;--r:16px;--sans:'Inter',system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace}
+:root[data-theme=light]{--bg:#f7f8fc;--bg2:#eef1f8;--card:#fff;--line:#dde2ee;--tx:#0f172a;--mu:#55627f;--ac:#059669;--ac2:#2563eb}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--bg);color:var(--tx);font:16px/1.65 var(--sans);-webkit-font-smoothing:antialiased;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
 a{color:inherit;text-decoration:none}
-.w{width:min(1200px,100% - 2.5rem);margin-inline:auto}
-h1,h2,h3{font-family:var(--h);line-height:.95;letter-spacing:-.03em;margin:0;text-transform:uppercase}
-h2{font-size:clamp(2.4rem,7vw,5.5rem)}
-.g{color:var(--g)}
-.eyebrow{font:600 .8rem var(--b);letter-spacing:.18em;text-transform:uppercase;color:var(--g);margin-bottom:1.2rem;display:block}
-section{padding:clamp(4.5rem,11vw,9rem) 0;position:relative}
-.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.95rem 1.6rem;border-radius:99px;font-weight:600;border:1px solid var(--bd);transition:transform .25s,background .25s,color .25s}
-.btn.p{background:var(--g);color:var(--ink);border-color:var(--g)}
-.btn:hover{transform:translateY(-3px)}.btn.p:hover{background:var(--g2)}
-.btn:not(.p):hover{background:var(--card)}
-:focus-visible{outline:3px solid var(--g);outline-offset:3px}
-/* nav */
-nav{position:fixed;inset:0 0 auto;z-index:20;padding:calc(.9rem + env(safe-area-inset-top,0px)) 0 .9rem;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 80%,transparent);border-bottom:1px solid var(--bd)}
-nav .w{display:flex;justify-content:space-between;align-items:center}
-.logo{font:700 1.2rem var(--h)}.logo b{color:var(--g)}
-nav ul{display:flex;gap:1.8rem;list-style:none;margin:0;padding:0}
-nav ul a{font-size:.92rem;color:var(--tx2);position:relative;padding:.3rem 0}
-nav ul a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:100%;background:var(--g);transform:scaleX(0);transform-origin:left;transition:transform .3s}
-nav ul a:hover,nav ul a.on{color:var(--tx)}nav ul a:hover::after,nav ul a.on::after{transform:scaleX(1)}
-.mb{display:none;background:none;border:1px solid var(--bd);color:var(--tx);border-radius:10px;padding:.5rem .8rem;font:inherit}
-#fx{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
-main{position:relative;z-index:1}
-/* hero */
-#top{min-height:100svh;display:flex;align-items:center;padding-top:7rem;overflow:hidden}
-.hero{display:grid;grid-template-columns:1.35fr 1fr;gap:2rem;align-items:center}
-h1{font-size:clamp(3rem,9.5vw,8.5rem)}
-.hero p{max-width:34rem;color:var(--tx2);margin:1.8rem 0}
-.ctas{display:flex;flex-wrap:wrap;gap:.8rem}
-.soc{display:flex;gap:1.4rem;margin-top:2rem;font-size:.92rem;color:var(--tx2)}.soc a:hover{color:var(--g)}
-.art{position:relative;aspect-ratio:1;max-width:460px;width:100%;justify-self:center}
-.art i{position:absolute;display:block;border-radius:28%;border:1px solid var(--bd)}
-.art .a{inset:0;background:linear-gradient(145deg,var(--gd),transparent 70%);animation:fl 9s ease-in-out infinite}
-.art .b{inset:14% 10% 22% 24%;background:var(--g);transform:rotate(-8deg);border-radius:22%;animation:fl 7s ease-in-out infinite reverse}
-.art .c{inset:48% 28% 6% 6%;background:var(--card);padding:1.1rem;font:500 .78rem/1.6 ui-monospace,monospace;color:var(--g);border-radius:18px;transform:rotate(4deg);font-style:normal;box-shadow:0 20px 50px rgba(0,0,0,.3)}
-.art .d{width:22%;aspect-ratio:1;right:0;bottom:12%;border-radius:50%;background:var(--g2);opacity:.9;animation:fl 5s ease-in-out infinite}
-@keyframes fl{50%{transform:translateY(-14px) rotate(2deg)}}
-.big{position:absolute;right:-2vw;bottom:-3vw;font:700 22vw/1 var(--h);color:var(--g);opacity:.04;pointer-events:none;user-select:none}
-/* about */
-.ab{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(2rem,6vw,6rem);margin-top:3rem}
-.lead{font:500 clamp(1.4rem,2.8vw,2.1rem)/1.3 var(--h);letter-spacing:-.01em}
-.lead em{font-style:normal;color:var(--g)}
-.ab p{color:var(--tx2);margin:0 0 1.2rem}
-.facts{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--bd);border:1px solid var(--bd);margin-top:2rem}
-.facts div{background:var(--bg);padding:1.2rem}.facts b{display:block;font:700 1.15rem var(--h);color:var(--g)}.facts span{font-size:.85rem;color:var(--tx2)}
-.pic{position:relative;width:min(100%,360px);aspect-ratio:4/5;margin:0 0 2.5rem}
-.pic::before{content:"";position:absolute;inset:0;background:var(--g);border-radius:28px;transform:translate(14px,14px) rotate(2deg)}
-.pic div{position:relative;height:100%;border-radius:28px;overflow:hidden;background:linear-gradient(145deg,var(--gd),var(--card));border:1px solid var(--bd);display:grid;place-items:center}
-.pic img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
-.pic b{font:700 5rem var(--h);color:var(--g);letter-spacing:-.05em}
-/* skills */
-#skills{background:var(--bg2)}
-.sk{margin-top:3.5rem;border-top:1px solid var(--bd)}
-.row{display:grid;grid-template-columns:.8fr 2fr;gap:1.5rem;padding:2rem 0;border-bottom:1px solid var(--bd);align-items:center}
-.row h3{font-size:1.1rem;color:var(--tx2);letter-spacing:0}
-.chips{display:flex;flex-wrap:wrap;gap:.7rem}
-.chips span{font:600 clamp(1.1rem,2.6vw,1.9rem) var(--h);padding:.5rem 1.2rem;border:1px solid var(--bd);border-radius:99px;transition:all .25s;cursor:default}
-.chips span:hover{background:var(--g);color:var(--ink);transform:translateY(-3px) rotate(-1deg)}
-/* projects */
-.pr{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(1.5rem,5vw,5rem);align-items:center;margin-top:clamp(3rem,8vw,6rem)}
-.pr:nth-child(even) .vis{order:2}
-.vis{aspect-ratio:4/3;border-radius:28px;background:linear-gradient(135deg,var(--gd),var(--card));border:1px solid var(--bd);position:relative;overflow:hidden;display:grid;place-items:center;transition:transform .5s}
-.pr:hover .vis{transform:scale(1.02) rotate(-.6deg)}
-.vis::before{content:"";position:absolute;width:70%;aspect-ratio:1;border-radius:50%;background:var(--g);opacity:.12;filter:blur(40px)}
-.vis b{font:700 clamp(4rem,12vw,9rem) var(--h);color:var(--g);position:relative;letter-spacing:-.05em}
-.vis small{position:absolute;left:1.4rem;bottom:1.2rem;font:600 .75rem var(--b);letter-spacing:.14em;text-transform:uppercase;color:var(--tx2)}
-.num{font:700 .9rem var(--h);color:var(--g)}
-.pr h3{font-size:clamp(1.9rem,4.2vw,3.3rem);margin:.6rem 0 1rem}
-.pr p{color:var(--tx2);margin:0 0 1.2rem}
-.tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem}.tags span{font-size:.8rem;padding:.25rem .8rem;border-radius:99px;background:var(--gd);color:var(--g)}
-@media (prefers-color-scheme:light){:root:not([data-theme="dark"]) .tags span{color:#173b2a}}
-.lnk{font-weight:600;border-bottom:2px solid var(--g);padding-bottom:2px;transition:color .2s}.lnk:hover{color:var(--g)}
-/* rumiware */
-#rumiware{background:var(--g);color:var(--ink)}
-#rumiware .eyebrow{color:var(--gd)}
-#rumiware .g{color:var(--gd)}
-.rw{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(2rem,6vw,5rem);align-items:end}
-#rumiware p{max-width:34rem;font-size:1.15rem;margin:1.5rem 0 2rem}
-#rumiware .btn{background:var(--ink);color:var(--g2);border-color:var(--ink)}
-.rwc{background:var(--ink);color:var(--tx);border-radius:28px;padding:2rem}
-.rwc b{font:700 clamp(2.4rem,5vw,3.6rem)/1 var(--h);color:var(--g);display:block;letter-spacing:-.03em}
-.rwc span{color:var(--tx2);font-size:.95rem}
-/* journey */
-.jr{margin-top:3.5rem;display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;counter-reset:s}
-.jr li{list-style:none;counter-increment:s;border-top:2px solid var(--bd);padding-top:1.2rem;transition:border-color .3s}
-.jr li:hover{border-color:var(--g)}
-.jr li::before{content:"0" counter(s);font:700 2.6rem var(--h);color:var(--g);display:block;margin-bottom:.6rem}
-.jr h3{font-size:1.2rem;margin-bottom:.5rem;line-height:1.1}.jr p{margin:0;color:var(--tx2);font-size:.95rem}
-.jr{padding:0}
-/* contact */
-#contact{background:var(--bg2);overflow:hidden}
-#contact h2{font-size:clamp(3rem,11vw,10rem)}
-#contact p{color:var(--tx2);max-width:32rem;margin:1.8rem 0 2.2rem}
-footer{padding:2rem 0;border-top:1px solid var(--bd);font-size:.9rem;color:var(--tx2)}
-footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
-/* reveal */
-.rv{opacity:0;transform:translateY(30px);transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1)}
-.rv.in{opacity:1;transform:none}
-[hidden]{display:none!important}
-@media (max-width:900px){
-.hero,.ab,.pr,.rw,.row{grid-template-columns:1fr}
-.pr:nth-child(even) .vis{order:0}
-.jr{grid-template-columns:1fr 1fr}
-.art{max-width:300px;order:-1;justify-self:start}
+.wrap{max-width:1100px;margin:auto;padding:0 22px}
+section{padding:90px 0}
+.alt{background:var(--bg2)}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);letter-spacing:-.02em;line-height:1.2;margin-bottom:10px}
+.sub{color:var(--mu);max-width:640px;margin-bottom:38px}
+.eyebrow{font:500 .8rem var(--mono);color:var(--ac);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;display:block}
+.grad{background:linear-gradient(90deg,var(--ac),var(--ac2));-webkit-background-clip:text;background-clip:text;color:transparent}
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--ac),var(--ac2));z-index:100}
+nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 80%,transparent);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:800;font-size:1.25rem}.logo b{color:var(--ac)}
+.links{display:flex;gap:26px;list-style:none;padding:0}
+.links a{color:var(--mu);font-size:.92rem;font-weight:500;transition:.2s}
+.links a:hover,.links a.on{color:var(--ac)}
+.nr{display:flex;gap:10px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:999px;font-weight:600;font-size:.92rem;border:1px solid var(--line);background:transparent;color:var(--tx);cursor:pointer;transition:.2s;font-family:inherit}
+.btn:hover{transform:translateY(-2px);border-color:var(--ac)}
+.btn.p{background:linear-gradient(90deg,var(--ac),var(--ac2));color:#06121a;border:0}
+.ib{width:40px;height:40px;padding:0;justify-content:center}
+#menu{display:none}
+.hero{min-height:92vh;display:flex;align-items:center;padding:60px 0;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;width:520px;height:520px;right:-120px;top:-80px;background:radial-gradient(circle,color-mix(in srgb,var(--ac2) 30%,transparent),transparent 65%);filter:blur(30px);z-index:0}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.3fr .7fr;gap:40px;align-items:center}
+.pill{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);background:var(--card);padding:6px 14px;border-radius:999px;font-size:.82rem;color:var(--mu);margin-bottom:22px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--ac);box-shadow:0 0 0 0 var(--ac);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px transparent}}
+h1{font-size:clamp(2.3rem,6vw,4rem);line-height:1.08;letter-spacing:-.03em;margin-bottom:18px}
+.type{font:500 1.1rem var(--mono);color:var(--ac);min-height:1.8em;margin-bottom:14px}
+.type::after{content:"▍";animation:bl 1s steps(1) infinite}@keyframes bl{50%{opacity:0}}
+.lead{color:var(--mu);max-width:560px;margin-bottom:28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:34px}
+.stats{display:flex;gap:34px;flex-wrap:wrap}
+.stats b{display:block;font-size:1.6rem}.stats span{color:var(--mu);font-size:.85rem}
+.ph{justify-self:center;position:relative;width:min(300px,70vw);aspect-ratio:1}
+.ph::before{content:"";position:absolute;inset:0;border-radius:50%;background:linear-gradient(135deg,var(--ac),var(--ac2));opacity:.25}
+.ph img{position:relative;width:100%;height:100%;object-fit:cover;border-radius:50%;border:2px solid var(--line)}
+.about{display:grid;grid-template-columns:1.2fr .8fr;gap:40px}
+.about p{color:var(--mu);margin-bottom:14px}
+.facts{display:grid;gap:12px;align-content:start}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px}
+.fact small{color:var(--mu);font:500 .72rem var(--mono);text-transform:uppercase;letter-spacing:.1em}
+.fact div{font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px;transition:.25s}
+.card:hover{transform:translateY(-4px);border-color:var(--ac);box-shadow:0 14px 30px -18px var(--ac)}
+.card h3{font-size:1.05rem;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:500 .8rem var(--mono);padding:5px 11px;border-radius:8px;background:var(--bg2);border:1px solid var(--line)}
+.chip em{font-style:normal;color:var(--ac);margin-left:6px;font-size:.7rem}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.f{padding:7px 16px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--mu);cursor:pointer;font:500 .85rem var(--sans)}
+.f.on,.f:hover{background:var(--ac);color:#06121a;border-color:var(--ac)}
+.proj{display:flex;flex-direction:column;gap:10px}
+.proj p{color:var(--mu);font-size:.92rem;flex:1}
+.meta{display:flex;justify-content:space-between;align-items:center;font:.78rem var(--mono);color:var(--mu)}
+.lang{display:inline-flex;align-items:center;gap:6px}.lang i{width:9px;height:9px;border-radius:50%;background:var(--ac2)}
+.tl{position:relative;max-width:700px;border-left:2px solid var(--line);margin-left:10px}
+.tl li{list-style:none;position:relative;padding:0 0 22px 30px;color:var(--mu)}
+.tl li::before{content:"";position:absolute;left:-8px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:2px solid var(--ac)}
+.tl li.now::before{background:var(--ac)}
+.tl b{color:var(--tx);display:block}
+.team{display:grid;grid-template-columns:auto 1fr;gap:30px;align-items:start;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:34px}
+.team img{width:110px;height:110px;border-radius:20px;object-fit:cover}
+.team q{display:block;color:var(--ac);font-style:italic;margin:6px 0 14px}
+.note{margin-top:16px;font-size:.85rem;color:var(--mu);border-left:3px solid var(--ac2);padding-left:12px}
+.term{background:#070b13;border:1px solid var(--line);border-radius:14px;overflow:hidden;font:.9rem var(--mono);color:#d7e0f5;max-width:760px}
+.tb{display:flex;gap:7px;padding:10px 14px;background:#0f1626;align-items:center;color:#7d8aa8;font-size:.78rem}
+.tb i{width:11px;height:11px;border-radius:50%;background:#ff5f57}.tb i:nth-child(2){background:#febc2e}.tb i:nth-child(3){background:#28c840}.tb span{margin-left:8px}
+#out{padding:16px;height:240px;overflow:auto;white-space:pre-wrap}
+.ln{display:flex;gap:8px;padding:0 16px 14px}.ln input{flex:1;background:none;border:0;outline:0;color:inherit;font:inherit}
+.ln span{color:var(--ac)}
+.cmds{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+form{display:grid;gap:14px;max-width:600px}
+input,textarea{width:100%;padding:13px 15px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--tx);font:inherit}
+input:focus,textarea:focus,.f:focus-visible,.btn:focus-visible,a:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--mu);font-size:.88rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+#top{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom));opacity:0;pointer-events:none;transition:.3s;z-index:40}
+#top.show{opacity:1;pointer-events:auto}
+.rv{opacity:0;transform:translateY(24px);transition:.7s}.rv.in{opacity:1;transform:none}
+@media(max-width:820px){
+ .links{position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);display:none}
+ .links.open{display:flex}.links a{display:block;padding:15px 22px}
+ #menu{display:inline-flex}.nr .btn.p{display:none}
+ .hero .wrap,.about{grid-template-columns:1fr}.ph{order:-1;width:200px}
+ .team{grid-template-columns:1fr}section{padding:64px 0}
 }
-@media (max-width:760px){
-.mb{display:block}
-nav ul{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);padding:.5rem 1.25rem 1rem;border-bottom:1px solid var(--bd)}
-nav ul.open{display:flex}nav ul a{display:block;padding:.8rem 0;font-size:1.1rem}
-.ctas .btn{flex:1 1 100%;justify-content:center}
-.jr{grid-template-columns:1fr}.facts{grid-template-columns:1fr 1fr}
-#top{padding-top:6rem}
-}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition-duration:.01ms!important}.rv{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-<nav aria-label="Main">
-<div class="w"><a class="logo" href="#top" aria-label="Home">MHA<b>.</b></a>
-<button class="mb" aria-expanded="false" aria-controls="menu">Menu</button>
-<ul id="menu"><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li><li><a href="#rumiware">RumiWare</a></li><li><a href="#journey">Journey</a></li><li><a href="#contact">Contact</a></li></ul></div>
-</nav>
+<div id="progress"></div>
+<nav><div class="wrap">
+ <a href="#home" class="logo">Hassan<b>.</b></a>
+ <ul class="links" id="links">
+  <li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li><li><a href="#journey">Journey</a></li><li><a href="#team">RumiWare</a></li><li><a href="#contact">Contact</a></li>
+ </ul>
+ <div class="nr">
+  <button class="btn ib" id="theme" aria-label="Toggle light or dark theme">◐</button>
+  <a class="btn p" href="#contact">Let’s talk</a>
+  <button class="btn ib" id="menu" aria-label="Open menu">☰</button>
+ </div>
+</div></nav>
 
-<canvas id="fx" aria-hidden="true"></canvas>
-<main>
-<section id="top"><div class="w hero">
-<div>
-<span class="eyebrow">Muhammad Hassan Ali · Software Developer</span>
-<h1>Building <span class="g">software.</span> Exploring what’s <span class="g">next.</span></h1>
-<p>Computer science undergraduate and Python backend developer with a growing focus on AI and automation. I build practical applications and keep sharpening my engineering skills.</p>
-<div class="ctas"><a class="btn p" href="#projects">View Projects →</a><a class="btn" href="#contact">Let’s Connect</a></div>
-<div class="soc"><a href="https://github.com/HafizHassanAlee" target="_blank" rel="noopener">GitHub ↗</a><a data-social="linkedin" href="#" target="_blank" rel="noopener" hidden>LinkedIn ↗</a></div>
-</div>
-<div class="art" aria-hidden="true"><i class="a"></i><i class="b"></i><i class="c">def build(idea):<br>&nbsp;&nbsp;return ship(idea)</i><i class="d"></i></div>
-</div><div class="big" aria-hidden="true">PY</div></section>
+<header class="hero" id="home"><div class="wrap">
+ <div>
+  <span class="pill"><span class="dot"></span>Studying, building and learning in public</span>
+  <h1>Building Software.<br><span class="grad">Exploring Intelligence.</span></h1>
+  <div class="type" id="type" aria-live="off"></div>
+  <p class="lead">I’m a Computer Science undergraduate and Python Full-Stack Developer passionate about building practical software, exploring modern technologies, and moving toward the future of AI.</p>
+  <div class="cta">
+   <a class="btn p" href="#projects">View my projects →</a>
+   <a class="btn" href="https://github.com/HafizHassanAlee" target="_blank" rel="noopener">GitHub</a>
+   <a class="btn" href="#contact">Contact me</a>
+  </div>
+  <div class="stats">
+   <div><b id="sRepos">—</b><span>Public repositories</span></div>
+   <div><b>4</b><span>Person team (RumiWare)</span></div>
+   <div><b>2030</b><span>AI Engineer goal</span></div>
+  </div>
+ </div>
+ <div class="ph"><img src="hassan-removebg-preview.png" alt="Portrait of Hassan Ali" width="300" height="300"></div>
+</div></header>
 
-<section id="about"><div class="w">
-<span class="eyebrow">01 — About</span>
-<h2>Learning by <span class="g">building.</span></h2>
-<div class="ab rv">
-<div><figure class="pic" style="margin-inline:0"><div id="pic"><b aria-hidden="true">MHA</b></div></figure><p class="lead" style="margin:0">I’m a computer science student who prefers to <em>learn by shipping</em> — one small, honest project at a time.</p></div>
-<div>
-<p>My path started with front-end HTML projects and moved into Python, SQL and backend development. I like understanding how systems fit together: data models, APIs, and the logic that connects them.</p>
-<p>Today I’m deepening my skills in FastAPI and databases, practising programming and data structures, and exploring how AI and automation can make software more useful.</p>
-<div class="facts"><div><b>BS CS</b><span>Undergraduate</span></div><div><b>Python</b><span>Primary language</span></div><div><b>Backend</b><span>Main focus</span></div><div><b>RumiWare</b><span>My team</span></div></div>
-</div></div></div></section>
-
-<section id="skills"><div class="w">
-<span class="eyebrow">02 — Skills</span>
-<h2>The <span class="g">toolkit.</span></h2>
-<div class="sk rv">
-<div class="row"><h3>Languages</h3><div class="chips"><span>Python</span><span>JavaScript</span><span>C++</span></div></div>
-<div class="row"><h3>Backend</h3><div class="chips"><span>FastAPI</span><span>REST APIs</span></div></div>
-<div class="row"><h3>Databases</h3><div class="chips"><span>SQL</span><span>PostgreSQL</span></div></div>
-<div class="row"><h3>Also exploring</h3><div class="chips"><span>Artificial Intelligence</span><span>Automation</span><span>Git &amp; GitHub</span></div></div>
-</div></div></section>
-
-<section id="projects"><div class="w">
-<span class="eyebrow">03 — Projects</span>
-<h2>Selected <span class="g">work.</span></h2>
-
-<article class="pr rv"><div class="vis"><b>SMS</b><small>Python · PostgreSQL</small></div>
-<div><span class="num">01</span><h3>Student Management System <span class="g">(SQL)</span></h3>
-<p>A student management application built with Python and a PostgreSQL database, practising schema design and SQL-backed operations.</p>
-<div class="tags"><span>Python</span><span>SQL</span><span>PostgreSQL</span></div>
-<a class="lnk" href="https://github.com/HafizHassanAlee/Student-Management-System-using-SQL" target="_blank" rel="noopener">View on GitHub ↗</a></div></article>
-
-<article class="pr rv"><div class="vis"><b>PY</b><small>Python</small></div>
-<div><span class="num">02</span><h3>Student Management System</h3>
-<p>An earlier Python take on managing student records — the starting point for the SQL-backed version above.</p>
-<div class="tags"><span>Python</span></div>
-<a class="lnk" href="https://github.com/HafizHassanAlee/STUDENT-MANAGEMENT-SYSTEM" target="_blank" rel="noopener">View on GitHub ↗</a></div></article>
-
-<article class="pr rv"><div class="vis"><b>AI</b><small>HTML · Front-end</small></div>
-<div><span class="num">03</span><h3>AI &amp; Software House Website</h3>
-<p>My first front-end development project: a website for an imaginary AI and software house, built with HTML.</p>
-<div class="tags"><span>HTML</span><span>Front-end</span></div>
-<a class="lnk" href="https://github.com/HafizHassanAlee/AI-Software-House-Website" target="_blank" rel="noopener">View on GitHub ↗</a></div></article>
-
-<article class="pr rv"><div class="vis"><b>RW</b><small>HTML · Team</small></div>
-<div><span class="num">04</span><h3>RumiWare</h3>
-<p>A repository connected to RumiWare, the software team I collaborate with.</p>
-<div class="tags"><span>HTML</span></div>
-<a class="lnk" href="https://github.com/HafizHassanAlee/Rumiware" target="_blank" rel="noopener">View on GitHub ↗</a></div></article>
+<section id="about"><div class="wrap">
+ <span class="eyebrow rv">// about</span>
+ <h2 class="rv">More than just writing code.</h2>
+ <div class="about rv">
+  <div>
+   <p>I’m a Computer Science undergraduate who enjoys understanding how software works and turning ideas into practical applications.</p>
+   <p>My journey started with programming fundamentals and gradually expanded into Python backend development, APIs, databases, JavaScript, and modern web technologies.</p>
+   <p>I enjoy solving problems, experimenting with ideas, and learning through hands-on projects. My long-term ambition is to become an AI Engineer and contribute to meaningful technology.</p>
+  </div>
+  <div class="facts">
+   <div class="fact"><small>Current focus</small><div>Python &amp; Backend Development</div></div>
+   <div class="fact"><small>Learning</small><div>JavaScript and Software Engineering</div></div>
+   <div class="fact"><small>Exploring</small><div>AI and Automation</div></div>
+   <div class="fact"><small>Goal</small><div>AI Engineer by 2030</div></div>
+  </div>
+ </div>
 </div></section>
 
-<section id="rumiware"><div class="w rw">
-<div class="rv"><span class="eyebrow">04 — Team</span>
-<h2>Rumi<span class="g">Ware.</span></h2>
-<p>RumiWare is the software development team I’m part of — where I collaborate, build and learn how real projects come together.</p>
-<a class="btn" href="https://rumiware.com" target="_blank" rel="noopener">Visit rumiware.com ↗</a></div>
-<div class="rwc rv"><b>Team<br>collaboration</b><span>Learning to build software with others.</span></div>
+<section id="skills" class="alt"><div class="wrap">
+ <span class="eyebrow rv">// skills</span>
+ <h2 class="rv">Tools I build with.</h2>
+ <p class="sub rv">No percentages. Each label says where I honestly am with the tool today.</p>
+ <div class="grid rv" id="skillGrid"></div>
 </div></section>
 
-<section id="journey"><div class="w">
-<span class="eyebrow">05 — Journey</span>
-<h2>Always <span class="g">growing.</span></h2>
-<ol class="jr rv">
-<li><h3>Software engineering</h3><p>Studying the fundamentals.</p></li>
-<li><h3>Practical projects</h3><p>Building to learn.</p></li>
-<li><h3>Backend</h3><p>Python, FastAPI, SQL.</p></li>
-<li><h3>Programming &amp; DSA</h3><p>Regular practice.</p></li>
-<li><h3>AI &amp; automation</h3><p>Exploring what’s next.</p></li>
-</ol></div></section>
-
-<section id="contact"><div class="w rv">
-<span class="eyebrow">06 — Contact</span>
-<h2>Have an idea? <span class="g">Let’s build it.</span></h2>
-<p>Open to collaborating, learning and building. Reach out and let’s talk.</p>
-<div class="ctas"><a class="btn p" data-email href="#" hidden>Email me →</a><a class="btn p" href="https://github.com/HafizHassanAlee" target="_blank" rel="noopener">GitHub ↗</a><a class="btn" data-social="linkedin" href="#" target="_blank" rel="noopener" hidden>LinkedIn ↗</a></div>
+<section id="projects"><div class="wrap">
+ <span class="eyebrow rv">// projects</span>
+ <h2 class="rv">Things I’ve actually built.</h2>
+ <p class="sub rv">Pulled live from my public GitHub repositories, so this list always matches what is really there.</p>
+ <div class="filters rv" id="filters"></div>
+ <div class="grid" id="projGrid"><div class="card">Loading projects…</div></div>
+ <p style="margin-top:28px"><a class="btn" href="https://github.com/HafizHassanAlee" target="_blank" rel="noopener">View all on GitHub →</a></p>
 </div></section>
-</main>
 
-<footer><div class="w"><span>© 2026 Muhammad Hassan Ali</span><span>Built with care · <a href="#top" class="g">Back to top ↑</a></span></div></footer>
+<section id="journey" class="alt"><div class="wrap">
+ <span class="eyebrow rv">// journey</span>
+ <h2 class="rv">How I got here.</h2>
+ <p class="sub rv">Milestones in order, without invented dates.</p>
+ <ol class="tl rv" id="tl" style="padding:0"></ol>
+ <h3 class="rv" style="margin:34px 0 14px">Currently exploring</h3>
+ <div class="grid rv" id="explore"></div>
+</div></section>
+
+<section id="team"><div class="wrap">
+ <span class="eyebrow rv">// team</span>
+ <div class="team rv">
+  <img src="rumiware-logo.jpeg" alt="RumiWare logo" width="110" height="110">
+  <div>
+   <h2>Working with the RumiWare team.</h2>
+   <q>“Building Technology. Creating Possibilities.”</q>
+   <p style="color:var(--mu);margin-bottom:12px">RumiWare is a four-member software development team turning ideas into practical digital solutions. As a Python Full-Stack Developer, I build web applications, backend functionality and frontend experiences, and collaborate with the team to deliver software.</p>
+   <div class="chips" style="margin-bottom:18px">
+    <span class="chip">Full-Stack Web</span><span class="chip">Python &amp; Backend</span><span class="chip">Frontend</span><span class="chip">Databases</span><span class="chip">UI/UX</span><span class="chip">AI &amp; Automation</span>
+   </div>
+   <div class="cta" style="margin:0">
+    <a class="btn" href="https://rumiware.com/" target="_blank" rel="noopener">Website</a>
+    <a class="btn" href="https://github.com/Rumi-Ware/RumiWare" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn" href="https://rumiware-schoolos.vercel.app/" target="_blank" rel="noopener">SchoolOS</a>
+   </div>
+   <p class="note">SchoolOS is described in its repository as a controlled pilot candidate for fictional data or an authorised test environment. It is not approved for real-school production use.</p>
+  </div>
+ </div>
+</div></section>
+
+<section id="terminal" class="alt"><div class="wrap">
+ <span class="eyebrow rv">// terminal</span>
+ <h2 class="rv">Ask my terminal.</h2>
+ <p class="sub rv">Optional. Type a command, or tap one below. Try <code>help</code>.</p>
+ <div class="cmds rv" id="cmds"></div>
+ <div class="term rv">
+  <div class="tb"><i></i><i></i><i></i><span>hassan@portfolio:~</span></div>
+  <div id="out" role="log"></div>
+  <div class="ln"><span>$</span><input id="cin" autocomplete="off" spellcheck="false" aria-label="Terminal command"></div>
+ </div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+ <span class="eyebrow rv">// contact</span>
+ <h2 class="rv">Have an idea? <span class="grad">Let’s build something.</span></h2>
+ <p class="sub rv">I’m always interested in connecting with developers, exploring ideas, learning from others, and working on meaningful software projects.</p>
+ <form class="rv" id="form">
+  <input name="n" placeholder="Your name" required>
+  <input name="e" type="email" placeholder="Your email" required>
+  <textarea name="m" rows="5" placeholder="Message" required></textarea>
+  <button class="btn p" type="submit" style="justify-self:start">Open in my email app →</button>
+ </form>
+</div></section>
+
+<footer><div class="wrap">
+ <span>© <span id="yr"></span> Hassan Ali. Built by hand, still learning.</span>
+ <span><a href="https://github.com/HafizHassanAlee" target="_blank" rel="noopener">GitHub</a> · <a id="li" href="#contact">LinkedIn</a></span>
+</div></footer>
+<button class="btn ib p" id="top" aria-label="Back to top">↑</button>
 
 <script>
-// Fill these in to show the Email and LinkedIn buttons (left empty so no broken links ship).
-const CONTACT={email:"",linkedin:"",photo:"hassan-removebg-preview.png"};
-if(CONTACT.photo){const i=new Image();i.alt="Portrait of Muhammad Hassan Ali";i.onload=()=>{const p=document.getElementById("pic");p.textContent="";p.appendChild(i)};i.src=CONTACT.photo;i.onerror=()=>{i.onerror=null;i.src="https://raw.githubusercontent.com/HafizHassanAlee/Pre-Portfolio/main/hassan-removebg-preview.png"}}
-if(CONTACT.email){document.querySelectorAll("[data-email]").forEach(e=>{e.href="mailto:"+CONTACT.email;e.hidden=false})}
-if(CONTACT.linkedin){document.querySelectorAll('[data-social="linkedin"]').forEach(e=>{e.href=CONTACT.linkedin;e.hidden=false})}
-(function(){
-const cv=document.getElementById("fx"),cx=cv.getContext("2d");if(!cx)return;
-const rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
-let W,H,P=[],m={x:-999,y:-999},raf,D=Math.min(devicePixelRatio||1,2);
-function col(){const l=matchMedia("(prefers-color-scheme:light)").matches&&document.documentElement.dataset.theme!=="dark";return l?[23,59,42,.5]:[166,226,46,1]}
-function size(){W=innerWidth;H=innerHeight;cv.width=W*D;cv.height=H*D;cx.setTransform(D,0,0,D,0,0);
-const n=Math.min(70,Math.floor(W*H/22000));P=Array.from({length:n},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35,r:Math.random()*1.5+.8}))}
+/* ===== EDIT THESE ===== */
+const GITHUB_USER="HafizHassanAlee";
+const EMAIL="your-email@example.com";          // <- put your real email
+const LINKEDIN="";                              // <- paste LinkedIn URL (leave "" to hide link)
+/* ====================== */
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+$("#yr").textContent=new Date().getFullYear();
+if(LINKEDIN){$("#li").href=LINKEDIN;$("#li").target="_blank"}else $("#li").remove();
+
+// theme (saved safely)
+const root=document.documentElement;
+try{const t=localStorage.getItem("theme");if(t)root.dataset.theme=t}catch(e){}
+$("#theme").onclick=()=>{const n=root.dataset.theme==="light"?"dark":"light";root.dataset.theme=n;try{localStorage.setItem("theme",n)}catch(e){}};
+$("#menu").onclick=()=>$("#links").classList.toggle("open");
+$$("#links a").forEach(a=>a.onclick=()=>$("#links").classList.remove("open"));
+
+// typing effect
+const words=["Python Full-Stack Developer","FastAPI & API builder","CS Undergraduate","Future AI Engineer"];
+let wi=0,ci=0,del=false;const tp=$("#type");
+(function tick(){const w=words[wi];tp.textContent=w.slice(0,ci);
+ if(!del&&ci===w.length){del=true;return setTimeout(tick,1400)}
+ if(del&&ci===0){del=false;wi=(wi+1)%words.length}
+ ci+=del?-1:1;setTimeout(tick,del?35:70)})();
+
+// skills (honest levels, edit freely)
+const skills={"Backend":[["Python","Comfortable"],["FastAPI","Building with"],["REST APIs","Building with"],["Authentication","Practised"]],
+"Frontend":[["JavaScript","Learning daily"],["HTML & CSS","Comfortable"],["Responsive UI","Practised"]],
+"Data":[["SQL","Learning"],["PostgreSQL","Learning"]],
+"Tools & Next":[["Git & GitHub","Comfortable"],["C++","Learning"],["AI & Automation","Exploring"]]};
+$("#skillGrid").innerHTML=Object.entries(skills).map(([g,l])=>`<div class="card"><h3>${g}</h3><div class="chips">${l.map(([n,v])=>`<span class="chip">${n}<em>${v}</em></span>`).join("")}</div></div>`).join("");
+
+// timeline
+const steps=["Started learning programming fundamentals.","Developed an interest in Computer Science.","Started building Python projects.","Explored backend development with FastAPI.","Worked with authentication and APIs.","Started learning JavaScript through daily practice.","Built practical student management applications.","Exploring AI and automation.","Working toward becoming an AI Engineer by 2030."];
+$("#tl").innerHTML=steps.map((s,i)=>`<li class="${i>6?"now":""}"><b>Step ${i+1}</b>${s}</li>`).join("");
+$("#explore").innerHTML=[["Backend","Deeper FastAPI and API design"],["Frontend","Daily JavaScript practice"],["Databases","PostgreSQL and SQL"],["Fundamentals","C++ and problem solving"],["Next","AI and automation"]].map(([a,b])=>`<div class="fact"><small>${a}</small><div>${b}</div></div>`).join("");
+
+// projects from GitHub API
+const esc=s=>String(s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let repos=[],filter="All";
 function draw(){
-cx.clearRect(0,0,W,H);const c=col(),k=c[3];
-for(const p of P){
-if(!rm){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
-const dx=p.x-m.x,dy=p.y-m.y,d=dx*dx+dy*dy;if(d<14000){p.x+=dx*.004;p.y+=dy*.004}}
-cx.fillStyle=`rgba(${c[0]},${c[1]},${c[2]},${.55*k})`;cx.beginPath();cx.arc(p.x,p.y,p.r,0,6.283);cx.fill()}
-for(let i=0;i<P.length;i++)for(let j=i+1;j<P.length;j++){
-const a=P[i],b=P[j],dx=a.x-b.x,dy=a.y-b.y,d=dx*dx+dy*dy;
-if(d<16000){cx.strokeStyle=`rgba(${c[0]},${c[1]},${c[2]},${(1-d/16000)*.22*k})`;cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(b.x,b.y);cx.stroke()}}
-for(const p of P){const dx=p.x-m.x,dy=p.y-m.y,d=dx*dx+dy*dy;
-if(d<30000){cx.strokeStyle=`rgba(${c[0]},${c[1]},${c[2]},${(1-d/30000)*.5*k})`;cx.beginPath();cx.moveTo(p.x,p.y);cx.lineTo(m.x,m.y);cx.stroke()}}
-if(!rm)raf=requestAnimationFrame(draw)}
-size();draw();
-addEventListener("resize",()=>{size();if(rm)draw()});
-addEventListener("pointermove",e=>{m.x=e.clientX;m.y=e.clientY},{passive:true});
-addEventListener("pointerleave",()=>{m.x=m.y=-999});
-document.addEventListener("visibilitychange",()=>{cancelAnimationFrame(raf);if(!document.hidden&&!rm)draw()});
-})();
-const mb=document.querySelector(".mb"),menu=document.getElementById("menu");
-mb.onclick=()=>{const o=menu.classList.toggle("open");mb.setAttribute("aria-expanded",o)};
-menu.onclick=e=>{if(e.target.tagName==="A"){menu.classList.remove("open");mb.setAttribute("aria-expanded",false)}};
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
-document.querySelectorAll(".rv").forEach(e=>io.observe(e));
-const links=[...menu.querySelectorAll("a")],secs=links.map(a=>document.querySelector(a.getAttribute("href")));
-const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle("on",l.getAttribute("href")==="#"+e.target.id))}}),{rootMargin:"-45% 0px -50% 0px"});
-secs.forEach(s=>s&&so.observe(s));
+ const list=repos.filter(r=>filter==="All"||r.language===filter);
+ $("#projGrid").innerHTML=list.length?list.map(r=>`<a class="card proj" href="${r.html_url}" target="_blank" rel="noopener"><h3>${esc(r.name.replace(/[-_]/g," "))}</h3><p>${esc(r.description)||"See the repository for details."}</p><div class="meta"><span class="lang"><i></i>${esc(r.language)||"—"}</span><span>★ ${r.stargazers_count}</span></div></a>`).join(""):`<div class="card">No projects in this category yet.</div>`;
+}
+fetch(`https://api.github.com/users/${GITHUB_USER}/repos?per_page=100&sort=updated`).then(r=>{if(!r.ok)throw 0;return r.json()}).then(d=>{
+ repos=d.filter(r=>!r.fork);$("#sRepos").textContent=d.length;
+ const langs=["All",...new Set(repos.map(r=>r.language).filter(Boolean))];
+ $("#filters").innerHTML=langs.map(l=>`<button class="f ${l==="All"?"on":""}">${l}</button>`).join("");
+ $$(".f").forEach(b=>b.onclick=()=>{filter=b.textContent;$$(".f").forEach(x=>x.classList.toggle("on",x===b));draw()});
+ draw();
+}).catch(()=>{$("#projGrid").innerHTML=`<div class="card">Couldn’t load projects right now. <a href="https://github.com/${GITHUB_USER}" style="color:var(--ac)">Browse them on GitHub →</a></div>`;$("#sRepos").textContent="10+"});
+
+// terminal
+const out=$("#out"),cin=$("#cin");
+const C={help:"Commands: about, skills, projects, goal, team, contact, clear",
+about:"Hassan Ali — CS undergraduate & Python Full-Stack Developer.",
+skills:"Python · FastAPI · JavaScript · SQL · Git (learning C++ & AI)",
+projects:"Scroll to #projects or run: open github",
+goal:"AI Engineer by 2030. One project at a time.",
+team:"RumiWare — a four-member software development team.",
+contact:"Use the form below, or open github for my profile."};
+function run(v){v=v.trim().toLowerCase();if(!v)return;out.textContent+=`$ ${v}\n`;
+ if(v==="clear")out.textContent="";
+ else if(v==="open github")window.open("https://github.com/"+GITHUB_USER,"_blank");
+ else out.textContent+=(C[v]||`command not found: ${v} (try help)`)+"\n";
+ out.scrollTop=out.scrollHeight}
+out.textContent="Welcome! Type help to begin.\n";
+cin.addEventListener("keydown",e=>{if(e.key==="Enter"){run(cin.value);cin.value=""}});
+$("#cmds").innerHTML=["help","about","skills","goal","team"].map(c=>`<button class="f">${c}</button>`).join("");
+$$("#cmds .f").forEach(b=>b.onclick=()=>run(b.textContent));
+
+// contact form -> mailto
+$("#form").onsubmit=e=>{e.preventDefault();const f=new FormData(e.target);
+ location.href=`mailto:${EMAIL}?subject=${encodeURIComponent("Portfolio message from "+f.get("n"))}&body=${encodeURIComponent(f.get("m")+"\n\n— "+f.get("n")+" ("+f.get("e")+")")}`};
+
+// scroll: progress bar, back-to-top, active nav, reveal
+addEventListener("scroll",()=>{const h=document.documentElement;
+ $("#progress").style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+"%";
+ $("#top").classList.toggle("show",h.scrollTop>600)},{passive:true});
+$("#top").onclick=()=>scrollTo({top:0});
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.12});
+$$(".rv").forEach(el=>io.observe(el));
+const so=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting)$$("#links a").forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+x.target.id))}),{rootMargin:"-45% 0px -50% 0px"});
+$$("section").forEach(s=>so.observe(s));
 </script>
 </body>
 </html>
